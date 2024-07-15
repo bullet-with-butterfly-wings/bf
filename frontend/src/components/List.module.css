@@ -1,0 +1,43 @@
+.list {
+  flex: 1;
+  width:70vw;
+  margin:10px ;
+  float:right;
+  top:200px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.scrollableList {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.list h2 {
+  margin-top: 0;
+}
+
+.listItem {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.itemHeader {
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+.itemHeader:hover {
+  background-color: #ddd;
+}
+
+.itemContent {
+  padding: 10px;
+  background-color: #fff;
+}

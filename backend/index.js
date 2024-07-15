@@ -24,7 +24,7 @@ app.get('/api/google-callback',async (req,res)=>{
     const {code} = req.query;
     const {tokens} = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens); //oauth2Client is the thing
-    res.redirect('http://localhost:3000');
+    res.redirect('http://localhost:3000/base');
 });
 
 app.get("/api", (req, res) => {

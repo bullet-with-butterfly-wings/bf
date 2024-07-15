@@ -1,35 +1,20 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-
+import Intro from './components/Intro'
+import Base from './components/Base'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
-  const [data, setData] = useState(null);
-  /*
-  useEffect(() => {
-    function start(){
-      gapi.client.init({
-        clientId: clientId,
-        scope: ""
-      })
-    };
-    gapi.load('client:auth2', start);
-    <LoginButton />
-  });
-  */
-  useEffect(() => {
-    fetch('/api/auth-url')
-    .then((res) => res.text())
-    .then((url) => setData(url));  
-  }, []);
-  
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <h1>Google Login</h1>
-        <a href={data} className="btn btn-primary">Sign up</a>
-      </header>
+      <Routes>
+        <Route exact path="/" element={<Intro />} />
+        <Route path="/base" element={<Base />} />
+      </Routes>
     </div>
-  );
+    </BrowserRouter>
+  )
 }
 
 export default App
