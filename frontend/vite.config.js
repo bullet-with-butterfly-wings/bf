@@ -10,8 +10,7 @@ export default defineConfig({
       "/api": {
         target: 'http://localhost:3001', // The port where your backend server is running
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\//, '')
-      }
+        secure: false, }
     }
   }
 })
