@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import "./index.css"
 import Intro from './components/Intro'
 import Base from './components/Base'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
