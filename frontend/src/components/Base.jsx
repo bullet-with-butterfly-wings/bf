@@ -9,8 +9,13 @@ function Base(){
         <div className="not">    
             <Sidebar />
             <div className='flex flex-col ml-96 justify-between'>
-                <h1 className='text-center mb-7'>Expenses</h1>
+            <div className='flex mx-20 flex-col'>
+            <div className='flex justify-between my-20'>
+                <h1 className='text-center mb-7'>Payment Requests</h1>
+                <button className='bg-black text-white font-bold py-2 px-4 rounded-xl'>Make new payment request</button>
+            </div>
                 <Table />
+            </div>
             </div>
         </div>
 

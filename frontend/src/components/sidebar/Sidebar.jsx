@@ -10,9 +10,9 @@ const Sidebar = () => {
     <div className=' flex flex-col h-full justify-between'>
       <div className='flex align-top flex-col'>
         <ProfileCard name={"Jonas Dej"} university={"University of Cambridge"} imageUrl={"https://via.placeholder.com/150"} />      
-        <Tracker />
-        <Tracker />
-        <Tracker />
+        <Tracker category = {"Tuition"} init={1000} current={400} money={"GBP"}/>
+        <Tracker category = {"Accomodation"} init={1000} current={500} money={"GBP"}/>
+        <Tracker category = {"Living Expenses"} init={1000} current={500} money={"GBP"}/>
       </div>
       <div className="flex align-middle justify-center my-10">
         <button className="w-2/3 rounded-full shadow font-bold text-xl" onClick={hello}><SettingsIcon /><span className='ml-2'>Settings</span></button>
