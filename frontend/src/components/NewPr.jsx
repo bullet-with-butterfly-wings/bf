@@ -60,7 +60,7 @@ function NewPr(){
                         name="category"
                         value={formData.category}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border rounded bg-black"
+                        className="w-full px-4 py-2 border rounded"
                         required
                         >
                         <option value="tuition">Tuition</option>
@@ -90,7 +90,7 @@ function NewPr(){
                             className="w-11/12 rounded px-4 py-2"
                             required
                             />
-                            <div className='content-center text-center rounded flex-grow bg-gray-500'>
+                            <div className='content-center text-center rounded flex-grow bg-gray-300'>
                                 GBP
                             </div>
                         </div>
