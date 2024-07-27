@@ -1,14 +1,8 @@
 import React from 'react';
 import TableRow from './TableRow';
 
-const data = [
-  { name:"lent", category: 'Food', date: '2024-07-20', amount: '$50', attachment: 'https://via.placeholder.com/150' },
-  { name:"lent", category: 'Travel', date: '2024-07-19', amount: '$300', attachment: null },
-  { name:"lent", category: 'Utilities', date: '2024-07-18', amount: '$100', attachment: 'https://via.placeholder.com/150' },
-  { name:"lent", category: 'Food', date: '2024-07-20', amount: '$50', attachment: 'https://via.placeholder.com/150' },
-];
 
-const Table = () => {
+function Table({data}){
   return (
     <div className="flex justify-center w-full">
       <table className="w-full bg-red-500 rounded-xl">
