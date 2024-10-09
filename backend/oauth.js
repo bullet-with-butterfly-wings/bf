@@ -26,40 +26,14 @@ module.exports = function(app){
 
     app.get('/api/google-callback',async (req,res)=>{
         const {code} = req.query;
-        console.log(code);
         const {tokens} = await oauth2Client.getToken(code);
         console.log(tokens.refresh_token);
         oauth2Client.setCredentials(tokens); //oauth2Client is the thing
-        /*
-        const transport = nodemailer.createTransport({
-            service:'gmail',
-            auth:{
-                type:'OAuth2',
-                user:"dej.jonas12@gmail.com",
-                clientId:process.env.CLIENT_ID,
-                clientSecret:process.env.CLIENT_SECRET,
-                refreshToken:tokens.refresh_token,
-                accessToken:tokens.access_token
-            },
-            tls: {
-                rejectUnauthorized: false
-              }
-              
-        });
-        const mailOptions = {
-            from:"dej.jonas12@gmail.com",
-            to:"dej.jonas12@gmail.com",
-            subject:"Hello from gmail",
-            text:"Hello from gmail"
-        };
-        transport.sendMail(mailOptions, (error,info)=>{
-            if(error){
-                console.log(error);
-            }
-            console.log(info);
-        });
-        transport.close();
-        */
-        res.redirect('http://localhost:3000/base');
+        //store the refresh_token
+        if (true){
+            res.redirect('http://localhost:3000/intro')
+        }else{
+            res.redirect('http://localhost:3000/base');
+        }
     });
 }

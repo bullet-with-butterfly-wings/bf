@@ -13,7 +13,7 @@ function Login(){
     <div className="fixed h-full w-full">
         <div className="flex h-full w-full flex-col justify-center align-middle">
             <h1 className='text-center'>Google Login</h1>
-            <a href={data} className="btn btn-primary text-center">Sign up</a>
+            <a href={data} className="btn btn-primary text-center">Log In</a>
         </div>
     </div>
     );
