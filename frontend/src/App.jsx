@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Login from './components/Login'
 import Intro from './components/Intro'
 import Base from './components/Base'
 import NewPr from './components/NewPr'
@@ -11,7 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Intro />} />
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/intro" element={<Intro />} />
         <Route path="/base" element={<Base />} />
         <Route path="/new-pr" element={<NewPr />} />
         <Route path="/settings" element={<Settings />} />

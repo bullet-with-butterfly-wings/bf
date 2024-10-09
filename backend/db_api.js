@@ -1,9 +1,10 @@
 require('dotenv').config({ path: '../.env' });
-const pgp = require('pg-promise')(/* options */)
 const express = require("express");
 const {google} = require('googleapis');
 
+const pgp = require('pg-promise')()
 const db = pgp(process.env.PG_STRING);
+
 
 
 module.exports = function(app){

@@ -4,7 +4,7 @@ const express = require("express");
 
 const app = express();
 
-require('./database')(app);
+require('./db_api')(app);
 require('./oauth')(app);
 
 app.get("/api", (req, res) => {
